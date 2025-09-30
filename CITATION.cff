@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper and this repository."
+title: "Pluralistic Homophily in Networks: Code and Reproducible Pipeline"
+authors:
+  - family-names: "Barraza"
+    given-names: "Fernando"
+    orcid: "https://orcid.org/0000-0003-0161-2220"
+    affiliation: "Universidad Javeriana de Cali; Universidad de San Buenaventura Cali"
+  - family-names: "Ramírez-Ovalle"
+    given-names: "Carlos"
+    orcid: "https://orcid.org/0000-0002-4254-5610"
+    affiliation: "Universidad Javeriana de Cali"
+  - family-names: "Alvarez"
+    given-names: "Abel"
+    orcid: "https://orcid.org/0000-0003-1253-4715"
+    affiliation: "Universidad Javeriana de Cali"
+  - family-names: "Fernández"
+    given-names: "Alejandro"
+    orcid: "https://orcid.org/0000-0002-7968-6871"
+    affiliation: "LIFIA, Facultad de Informática, UNLP; CIC Buenos Aires"
+repository-code: "https://github.com/fernandobarraza/local-pluralistic-homophily"
+license: "MIT"
+version: "0.1.0"
+date-released: "2025-09-25"
+references:
+  - type: dataset
+    authors:
+      - family-names: "Barraza"
+        given-names: "Fernando"
+      - family-names: "Ramírez-Ovalle"
+        given-names: "Carlos"
+      - family-names: "Alvarez"
+        given-names: "Abel"
+      - family-names: "Fernández"
+        given-names: "Alejandro"
+    title: "Preprocessed network datasets for 'Local pluralistic homophily and community boundaries'"
+    doi: "10.5281/zenodo.17204706"
+    year: 2025
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Barraza"
+      given-names: "Fernando"
+    - family-names: "Ramírez-Ovalle"
+      given-names: "Carlos"
+    - family-names: "Alvarez"
+      given-names: "Abel"
+    - family-names: "Fernández"
+      given-names: "Alejandro"
+  title: "Local pluralistic homophily and community boundaries"
+  journal: "Applied Sciences"
+  year: 2025
+  doi: "10.3390/appXXXXX"

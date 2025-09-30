@@ -1,0 +1,41 @@
+{
+  "title": "Pluralistic Homophily in Networks: Code and Reproducible Pipeline",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Barraza, Fernando",
+      "orcid": "0000-0003-0161-2220",
+      "affiliation": "Universidad Javeriana de Cali; Universidad de San Buenaventura Cali"
+    },
+    {
+      "name": "Ram\u00edrez-Ovalle, Carlos",
+      "orcid": "0000-0002-4254-5610",
+      "affiliation": "Universidad Javeriana de Cali"
+    },
+    {
+      "name": "Alvarez, Abel",
+      "orcid": "0000-0003-1253-4715",
+      "affiliation": "Universidad Javeriana de Cali"
+    },
+    {
+      "name": "Fern\u00e1ndez, Alejandro",
+      "orcid": "0000-0002-7968-6871",
+      "affiliation": "LIFIA, Facultad de Inform\u00e1tica, UNLP; CIC Buenos Aires"
+    }
+  ],
+  "description": "Reproducible code for neighborhood-centered pluralistic homophily (tilde h_v), normalized inter-community weight curves, and sensitivity curves with GCC. Includes validation, dataset descriptives, supplemental homophily (edge/community), and LFR helpers.",
+  "license": "mit-license",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/fernandobarraza/local-pluralistic-homophily",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.17204706",
+      "relation": "isSupplementedBy",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Corresponding author: fernandobarraza@javerianacali.edu.co"
+}

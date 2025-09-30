@@ -1,0 +1,6 @@
+numpy>=1.23
+pandas>=1.5
+igraph>=0.10
+networkx>=2.8
+networkit>=10.0
+matplotlib>=3.7
