@@ -390,9 +390,65 @@ def calculate_ghv(graph: ig.Graph, scalar_name: str = "scalar_value") -> Tuple[n
     h_global = float(graph.assortativity(types1=scalar_name, directed=False))
     return ghv, h_global
 
+
+# ---------------------------------------------------------------------
+# Normalized local pluralistic homophily 
+# ---------------------------------------------------------------------
+def calculate_h_v_normalized(
+    graph: ig.Graph, scalar_name: str = "scalar_value"
+) -> Tuple[float, np.ndarray, float]:
+    """Legacy normalized local pluralistic homophily metric (hv).
+
+    Parameters
+    ----------
+    graph : ig.Graph
+        Graph with scalar values stored as a vertex attribute.
+    scalar_name : str, default 'scalar_value'
+        Name of the vertex attribute containing scalar values.
+
+    Returns
+    -------
+    lambda_value : float
+        Normalization constant such that ``sum(deltas_v)`` equals global assortativity.
+    deltas_v : np.ndarray
+        Per-node contributions to global assortativity.
+    h_global : float
+        Global assortativity for ``scalar_name``.
+    """
+
+    if graph.ecount() == 0:
+        raise ValueError("Cannot compute hv on graphs without edges.")
+
+    scalar = np.asarray(graph.vs[scalar_name], dtype=float)
+    edges = graph.get_edgelist()
+
+    edge_scalars: List[float] = []
+    for u, v in edges:
+        edge_scalars.append(scalar[u])
+        edge_scalars.append(scalar[v])
+
+    mu = float(np.mean(edge_scalars))
+    sigma2 = float(np.var(edge_scalars))
+    if sigma2 == 0.0:
+        raise ValueError("Zero variance over edge-endpoint scalar values.")
+
+    centered = scalar - mu
+    lambda_value = 1.0 / (4.0 * graph.ecount() * sigma2)
+    deltas_v = np.zeros(graph.vcount(), dtype=float)
+
+    for v in range(graph.vcount()):
+        neighbors = graph.neighbors(v)
+        if not neighbors:
+            continue
+        deltas_v[v] = lambda_value * centered[v] * np.sum(centered[neighbors])
+
+    h_global = float(graph.assortativity(types1=scalar_name, directed=False))
+    return lambda_value, deltas_v, h_global
+
 # ---------------------------------------------------------------------
 # Overlap-aware immunization heuristics (Kumar et al. style)
 # ---------------------------------------------------------------------
+
 def get_overlapping_nodes(node_comms: Dict[int, Set[str]]) -> List[int]:
     """
     Return nodes that belong to more than one community.
