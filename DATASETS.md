@@ -11,4 +11,4 @@ datasets/<key>/
   <key>_node_to_communities.csv     # node_id,comm1,comm2,...
 ```
 
-Replace `<key>` with: `dblp`, `lj`, `youtube`, `so`, `text`, or `LFR_*`.
+Replace `<key>` with: `dblp`, `lj`, `youtube`, `so`,  `amazon`,  `deezer`,  `twitch`,  `github`, `text`, or `LFR_*`.
