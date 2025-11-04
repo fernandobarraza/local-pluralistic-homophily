@@ -88,13 +88,25 @@ def main():
             "--no-plot"
         ])
 
-    if not args.no_winter_plot and len(args.datasets) == 4:
-        run([
-            "python", "core/plot_w_inter_curves_2x2.py",
-            "--datasets", *args.datasets,
-            "--in-dir", args.meta_dir,
-            "--out-file", args.meta_dir / "meta_eval_grid_2x2_norm.png",
-        ])
+    # Plot grids depending on dataset count
+    if not args.no_winter_plot:
+        if len(args.datasets) == 4:
+            run([
+                "python", "core/plot_w_inter_curves_2x2.py",
+                "--datasets", *args.datasets,
+                "--in-dir", args.meta_dir,
+                "--out-file", args.meta_dir / "meta_eval_grid_2x2_norm.png",
+            ])
+        elif len(args.datasets) == 8:
+            run([
+                "python", "core/plot_w_inter_curves_2x4.py",
+                "--datasets", *args.datasets,
+                "--in-dir", args.meta_dir,
+                "--out-file", args.meta_dir / "meta_eval_grid_4x2_norm.png",
+            ])
+        else:
+            print(f"[warn] Skipping W_inter grid plot: expected 4 or 8 datasets, got {len(args.datasets)}")
+
 
     # 3) Sensitivity curves (reads processed homophily/GCC curves; attaches hv metrics by template)
     run([
