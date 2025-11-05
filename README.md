@@ -79,7 +79,15 @@ If `<key>_node_to_communities.csv` is missing but `<key>_communities.txt` exists
 python lfr/gen_node_communities.py   --network-file datasets/<key>/<key>_network.txt   --communities-file datasets/<key>/<key>_communities.txt   --out-dir datasets   --dataset-key <key>
 ```
 
-**Dataset DOI:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17204707.svg)](https://doi.org/10.5281/zenodo.17204707)
+**Dataset DOI (concept, always latest):**  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17204706.svg)](https://doi.org/10.5281/zenodo.17204706)
+
+<details>
+<summary>Version-specific DOI used in the paper (for exact reproducibility)</summary>
+
+- v2: https://doi.org/10.5281/zenodo.17536223  
+- v1: https://doi.org/10.5281/zenodo.17204707
+</details>
 
 ---
 
@@ -136,18 +144,22 @@ python core/forest_plot.py   --in-dir outputs/edge_ratio   --datasets dblp lj yo
 
 ## Citing
 
-If you use this code, please cite both the paper and this repository:
+If you use this work, please cite **the paper**, **the dataset**, and (optionally) **the code**.
 
-**Dataset**  
-> Barraza, F. (2025). *Local Pluralistic Homophily* [Data set]. Zenodo.  
-> DOI: **https://doi.org/10.5281/zenodo.17204707**
+**Paper**  
+> Barraza, F., Ramírez-Ovalle, C., Álvarez, A., & Fernández, A. (2025).  
+> *Local Pluralistic Homophily for Boundary-Spanning Node Detection in Overlapping Community Networks*.  
+> (journal info and DOI to appear)
 
-**Software**  
-> Local Pluralistic Homophily — Reproducible Pipeline (this repository).  
-> DOI: **https://doi.org/10.5281/zenodo.17204707**
+**Dataset (Zenodo)**  
+> Barraza, F. (2025). *Local Pluralistic Homophily — Preprocessed Datasets* [Data set]. Zenodo.  
+> **Concept DOI (latest):** https://doi.org/10.5281/zenodo.17204706  
+> *For exact replication of the manuscript:* **v2 DOI:** https://doi.org/10.5281/zenodo.17536223
 
-A `CITATION.cff` file is included so GitHub can render a **“Cite this repository”** button.
-
+**Software (GitHub)**  
+> Barraza, F. (2025). *local-pluralistic-homophily — Reproducible Pipeline* [Source code]. GitHub.  
+> https://github.com/fernandobarraza/local-pluralistic-homophily  
+> *(Pin a specific version for reproducibility, e.g., tag `v1.0.0` or commit `abcdef1`.)*
 ---
 
 ## License
