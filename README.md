@@ -80,7 +80,8 @@ python lfr/gen_node_communities.py   --network-file datasets/<key>/<key>_network
 ```
 
 **Dataset DOI (concept, always latest):**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17204706.svg)](https://doi.org/10.5281/zenodo.17204706)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17204706-blue)](https://doi.org/10.5281/zenodo.17204706)
+
 
 <details>
 <summary>Version-specific DOI used in the paper (for exact reproducibility)</summary>
